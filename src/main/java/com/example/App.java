@@ -59,7 +59,7 @@ public class App {
         server.createContext("/", new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
-                String response = String.format("Hello from the %s environment!", ENVIRONMENT);
+                String response = String.format("Hello from the %s environment! hiiii", ENVIRONMENT);
                 exchange.sendResponseHeaders(200, response.getBytes().length);
                 exchange.getResponseBody().write(response.getBytes());
                 exchange.close();
